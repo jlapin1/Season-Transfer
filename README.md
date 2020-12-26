@@ -4,11 +4,11 @@ photos of Yosemite National Park, I sought a similar model that could transfer t
 this task I downloaded from google images 700 photos each depicting the two seasons. I purposely chose photos of varied settings, urban and suburban parks and streets, rural
 pastures, mountaintop vistas, buildings, people, etc., in order to help the network generalize as well as possible.
 
-I have provided several codes using different architectures. SeasonTransfer.py is the implementation closest to [2], using a Unet as the generator and a 30x30 patchgan for the
+I have provided several codes using different architectures. SeasonTransfer.py is the implementation closest to [2], using a U-net as the generator and a 30x30 patchgan for the
 discriminator. This is the model that the example pictures were generated from. Other implementations that worked well include SeasonTransferSN.py, which provides great
 stability due to the use of Spectral normalization [3] (an additional script is provided, SpecNorm.py, with the normalization implementation). Also adaptive instance normalization
-led to varied, non deterministic mappings between the seasons (SeasonTransferAdaIN.py). All codes use binary cross entropy as the loss function, and work on photos of 256x256
-resolution. Ultimately the quality of the results seemed to be hinded by the limited training set size.
+led to varied, non deterministic mappings between the seasons (SeasonTransferAdaIN.py). Additionally I have provided a ResNet implementation (SeasonTransferResNet.py), which
+is the same implementation from [1], but could not be training in reasonable time using my laptop, intel I7. All codes use binary cross entropy as the loss function, and work on photos of 256x256 resolution. Ultimately the quality of the results seemed to be hinded by the limited training set size.
 
 The pictures provided are 4 mappings, both Autumn to Summer and vice-versa, taken from the training set. Additionally there are 3 Summer to Autumn mappings using various Summer
 setting taken with my phone during Summer 2020.
