@@ -8,10 +8,9 @@ I have provided several codes using different architectures. SeasonTransfer.py i
 discriminator. This is the model that the example pictures were generated from. Other implementations that worked well include SeasonTransferSN.py, which provides great
 stability due to the use of Spectral normalization [3] (an additional script is provided, SpecNorm.py, with the normalization implementation). Also adaptive instance normalization
 led to varied, non deterministic mappings between the seasons (SeasonTransferAdaIN.py). Additionally I have provided a ResNet implementation (SeasonTransferResNet.py), which
-is the same implementation from [1], but could not be training in reasonable time using my laptop, intel I7. All codes use binary cross entropy as the loss function, and work on photos of 256x256 resolution. Ultimately the quality of the results seemed to be hinded by the limited training set size.
+is the same implementation from [1], but could not be trained in reasonable time using my laptop (intel I core7). All codes use binary cross entropy as the loss function, and work on photos of 256x256 resolution. Ultimately the quality of the results seemed to be hinded by the limited training set size.
 
-The pictures provided are 4 mappings, both Autumn to Summer and vice-versa, taken from the training set. Additionally there are 3 Summer to Autumn mappings using various Summer
-setting taken with my phone during Summer 2020.
+The pictures provided are 3 mappings, both Autumn to Summer and vice-versa, taken from the training set (TrainingSet_[].png). Additionally there are 3 Summer to Autumn mappings (MyPhone_[].png) using various Summer settinsg taken with my phone during Summer 2020.
 
 [1] Zhu, Y., Park, T., Isola, P., Efros A.A. (2018) Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
 [2] https://www.tensorflow.org/tutorials/generative/cyclegan
